@@ -20,6 +20,9 @@ public class ScreenShooter : MonoBehaviour
     public String HP;
     [Header("dice numbers")]
     public List<String> diceSides;
+    [Header("dice #2 numbers & character health")]
+    public List<String> diceTWOSides;
+    public String CharacterHP;
 
     [Header("Card info text elements")]
     [SerializeField] TMP_Text cardNameText;
@@ -31,6 +34,10 @@ public class ScreenShooter : MonoBehaviour
     [SerializeField] TMP_Text HPText;
     [SerializeField] List<TMP_Text> diceTexts;
     [SerializeField] Image CardpictureElement;
+    [Header("dice #2 numbers & character health")]
+    [SerializeField] List<TMP_Text> diceTWOTexts;
+    public TMP_Text CharacterHPText;
+
 
     void Update()
     {
@@ -48,10 +55,12 @@ public class ScreenShooter : MonoBehaviour
         movementText.text = Movement;
         intText.text = Int;
         HPText.text = HP;
+        CharacterHPText.text = CharacterHP;
 
         for(int lcv=0;lcv<diceTexts.Count;lcv++)
         {
             diceTexts[lcv].text = diceSides[lcv];
+            diceTWOTexts[lcv].text = diceTWOSides[lcv];
         }
 
         if(textIsForStatsWhite)
