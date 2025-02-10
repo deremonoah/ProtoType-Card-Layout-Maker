@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ScreenShooter : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=DyiJpBpOVKA
+
     [Header("Card Info")]
     public String CardName;
     [TextArea(4, 10)]
