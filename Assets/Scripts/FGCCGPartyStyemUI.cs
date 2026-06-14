@@ -40,7 +40,7 @@ public class FGCCGPartyStyemUI : MonoBehaviour
             stocksUI[lcv].SetActive(false);
         }
 
-        int clamped = Mathf.Clamp(stocks, 1, 5);
+        int clamped = Mathf.Clamp(stocks, 0, 5);
         for(int lcv=0;lcv<clamped;lcv++)
         {
             stocksUI[lcv].SetActive(true);
@@ -51,7 +51,7 @@ public class FGCCGPartyStyemUI : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         ScreenCapture.CaptureScreenshot(CardName + ".png", 4);
-        Debug.Log(CardName + "has been captured");
+        Debug.Log(CardName + " has been captured");
         //not sure why the thingy is failing idk --> "/F:/ART!!!!/Games/Mad Scientist Card Game/Layout Maker Assets"
     }
 }
